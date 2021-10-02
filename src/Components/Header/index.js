@@ -10,6 +10,7 @@ import {
   NavLink,
   NavbarText
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 function Header(){
     const [isOpen, setIsOpen] = useState(false);
 
@@ -41,7 +42,7 @@ function Header(){
               </div>
               <div>
               <div className="nav-item">
-                  <div className="nav-link btn ">Sign Up</div>
+                  <Link to='/sign-in' className="nav-link btn ">Sign Up / In</Link>
                 </div>
 
               </div>

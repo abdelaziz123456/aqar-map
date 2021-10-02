@@ -1,0 +1,22 @@
+@import '../../scss/variables.scss';
+.sign-in{
+
+    .form-control{
+        height: 30px;
+    }
+    .btn{
+        
+        
+    }
+
+}
+
+.form-button{
+    background-color: $color-main;
+    color: white;
+    min-width: 100% !important;
+    &:hover{
+        color: white;
+    }
+}
+
