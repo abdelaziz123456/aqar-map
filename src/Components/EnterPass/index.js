@@ -8,7 +8,7 @@ function EnterPass(){
 
         <InputFiled type={'password'} label={'Password'} id={'passcon1'} placeHolder={'enter password'}/>
         <InputFiled type={'password'} label={'Confirm Password'} id={'passcon2'} placeHolder={'Confirm password'}/>
-        <div className="btn form-button">
+        <div className="btn form-button my-3">
             change password
         </div>
 

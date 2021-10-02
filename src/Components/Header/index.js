@@ -42,7 +42,7 @@ function Header(){
               </div>
               <div>
               <div className="nav-item">
-                  <Link to='/sign-in' className="nav-link btn ">Sign Up / In</Link>
+                  <Link to='/sign-in' className="nav-link btn  ">Sign Up / In</Link>
                 </div>
 
               </div>

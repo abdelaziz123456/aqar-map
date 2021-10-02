@@ -8,6 +8,7 @@ import SignIn from './Components/SignIn';
 import ForgetPassword from './Components/ForgetPass';
 import EnterPass from './Components/EnterPass';
 import SignUp from './Components/SignUp';
+import ContactUs from './Components/ContactUs';
 function App() {
   return (
 
@@ -34,6 +35,10 @@ function App() {
 
     <Route exact path='/sign-up'>
       <SignUp/>
+    </Route>
+
+    <Route exact path='/contact-us'>
+      <ContactUs/>
     </Route>
 
 

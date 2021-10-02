@@ -25,6 +25,7 @@
         span{
             color:$color-main
         }
+
        
     }
     .icons{
@@ -35,6 +36,12 @@
         }
         
     }
+    .line{
+        width: 60px;
+        border-bottom: 2px solid $color-main;
+    }
+
+   
 
 }
 
