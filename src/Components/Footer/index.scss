@@ -1,0 +1,40 @@
+@import "../../scss/variables.scss";
+
+.footer{
+    border-top: 1px solid rgba(128, 128, 128, 0.493);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+
+   .header{
+       color: black;
+       font-weight: 700;
+       
+   }
+   .main-logo+p{
+    margin-top: 1rem;
+       
+       max-width: 300px;
+   }
+    .main-logo{
+        font-weight: 900;
+        padding-bottom: 0 !important;
+        border-bottom: 2px solid $color-main;
+        color: black;
+        text-decoration: none;
+        
+
+        span{
+            color:$color-main
+        }
+       
+    }
+    .icons{
+        max-width: 100px;
+        color: $color-main;
+        .icon{
+            cursor: pointer;
+        }
+        
+    }
+
+}
+

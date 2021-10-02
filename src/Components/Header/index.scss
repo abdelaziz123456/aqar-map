@@ -1,0 +1,55 @@
+
+@import "../../scss/variables.scss";
+*{
+    box-sizing: padding-box !important;
+}
+
+
+.custom-header{
+    
+    .nav-icon{
+        font-weight: 900;
+        padding-bottom: 0 !important;
+        border-bottom: 2px solid $color-main;
+        span{
+            color:$color-main
+        }
+       
+    }
+    .nav-link{
+        color: black !important;
+        font-size: large;
+        font-weight: 600;
+        margin: 0 10px;
+      
+
+    }
+    .btn{
+        background-color: $color-main;
+        color: aliceblue !important;
+        border-bottom: none !important;
+    }
+
+    
+}
+
+
+
+@media (max-width:767px) {
+    .d-flex{
+        flex-wrap: wrap;
+        .nav-item{
+            width: 100% !important;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+        .btn{
+            max-width:100px
+        }
+    }
+   
+    
+}
+
+
