@@ -1,0 +1,27 @@
+.about{
+    .content-header{
+        display: flex;
+        flex-wrap: wrap;
+        
+        .left{
+            flex: 2;
+            
+            .h1{
+                font-weight: 700;
+            }
+
+
+        }
+        .right{
+            min-height: 300px;
+            flex: 3;
+            background-image: url('../../images/Background.png');
+            background-size:cover;
+            background-position: center;
+
+        }
+    }
+    
+    }
+
+    

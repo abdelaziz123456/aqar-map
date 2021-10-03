@@ -24,10 +24,20 @@ function Footer(){
                 <p className="line">
                     
                 </p>
-                <p >
-                    About
+                <p>
+                <Link className='text-decoration-none text-secondary' to="/about">About</Link>
+
                 </p>
+                <p>
                 <Link className='text-decoration-none text-secondary' to="/contact-us">Contact Us</Link>
+
+                </p>
+                
+                <p>
+                <Link className='text-decoration-none text-secondary' to="/privacy">Privacy</Link>
+
+                </p>
+                
             </div>
             <div>
             <p className="header">

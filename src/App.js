@@ -9,6 +9,7 @@ import ForgetPassword from './Components/ForgetPass';
 import EnterPass from './Components/EnterPass';
 import SignUp from './Components/SignUp';
 import ContactUs from './Components/ContactUs';
+import About from './Components/About';
 function App() {
   return (
 
@@ -39,6 +40,10 @@ function App() {
 
     <Route exact path='/contact-us'>
       <ContactUs/>
+    </Route>
+
+    <Route exact path='/about'>
+      <About/>
     </Route>
 
 
