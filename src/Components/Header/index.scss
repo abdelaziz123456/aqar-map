@@ -21,6 +21,9 @@
         font-size: large;
         font-weight: 600;
         margin: 0 10px;
+        &:active{
+           color:$color-main !important
+        }
       
 
     }

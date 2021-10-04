@@ -1,5 +1,6 @@
 import FormContainer from "../FormContainer" 
-import InputFiled from "../InputFiled"
+import InputFiled from "../InputFiled";
+import contact from '../../images/contact.png'
 function ContactUs(){
 
     return(
@@ -19,6 +20,9 @@ function ContactUs(){
             <p className="fw-bold">
                 Shoubra Elkhema, Cairo,Egypt
             </p>
+            </div>
+            <div className='p-5'>
+                <img src={contact}  className="img-fluid" />
             </div>
             <FormContainer header={'Send email'}>
                <InputFiled label={'Name'} id={'name'} placeHolder={'enter your name'} type={'text'}/>

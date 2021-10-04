@@ -1,0 +1,17 @@
+@import '../../scss/variables.scss';
+.privacy{
+    .links-section{
+        flex:1
+    }
+
+    .content-section{
+        flex:3
+    }
+    ul>li{
+        color: $color-main;
+        padding-top: 5px;
+        small{
+            color:black
+        }
+    }
+}

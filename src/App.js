@@ -10,6 +10,7 @@ import EnterPass from './Components/EnterPass';
 import SignUp from './Components/SignUp';
 import ContactUs from './Components/ContactUs';
 import About from './Components/About';
+import Privacy from './Components/Privacy';
 function App() {
   return (
 
@@ -44,6 +45,11 @@ function App() {
 
     <Route exact path='/about'>
       <About/>
+    </Route>
+
+
+    <Route exact path='/privacy'>
+      <Privacy/>
     </Route>
 
 
