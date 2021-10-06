@@ -1,0 +1,15 @@
+@import '../../scss/variables.scss';
+.buy{
+    .unit{
+        
+        .apart{
+            border:1px solid rgba(128, 128, 128, 0.15);
+            .details{
+                
+            }
+            .price{
+                color:$color-main
+            }
+        }
+    }
+}

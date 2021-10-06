@@ -1,0 +1,17 @@
+@import '../../scss/variables.scss';
+.search-bar{
+
+    .col-12{
+        
+        padding-left: 0 !important;
+        padding-right: 5px !important;
+        padding-left: 0 !important;
+        padding-right: 5px !important;
+        margin-bottom: 10px !important;
+    }
+    .btn{
+        background-color: $color-main;
+        color: azure;
+        
+    }
+}
