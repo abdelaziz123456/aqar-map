@@ -19,7 +19,7 @@ function Header(){
     return (
       <div className='custom-header mb-3'>
         <Navbar color="white" light expand="md">
-          <NavbarBrand href="/" className='nav-icon'><span>Aqar</span>-Map</NavbarBrand>
+          <NavbarBrand href="/aqar-map" className='nav-icon'><span>Aqar</span>-Map</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className='d-flex justify-content-between w-100' navbar>
