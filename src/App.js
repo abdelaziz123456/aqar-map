@@ -11,6 +11,7 @@ import SignUp from './Components/SignUp';
 import ContactUs from './Components/ContactUs';
 import About from './Components/About';
 import Privacy from './Components/Privacy';
+import Buy from './Components/Buy';
 function App() {
   return (
 
@@ -50,6 +51,10 @@ function App() {
 
     <Route exact path='/privacy'>
       <Privacy/>
+    </Route>
+
+    <Route exact path='/buy'>
+      <Buy/>
     </Route>
 
 

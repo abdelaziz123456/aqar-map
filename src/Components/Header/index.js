@@ -33,7 +33,7 @@ function Header(){
                   <Link to='/sell' className="nav-link">Sell</Link>
                 </div>
                 <div className="nav-item">
-                  <Link to='#' className="nav-link">Buy</Link>
+                  <Link to='/buy' className="nav-link">Buy</Link>
                 </div>
                 <div className="nav-item">
                   <Link to='#' className="nav-link">Rent</Link>
