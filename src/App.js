@@ -19,7 +19,7 @@ function App() {
     <div  className="app  my-3 ">
     <Navbar/>
     
-    <Route exact path='/'>
+    <Route exact path='/aqar-map'>
       <MainContent/>
     </Route >
 
