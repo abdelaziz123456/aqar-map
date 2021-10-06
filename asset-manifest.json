@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/aqar-map/static/css/main.a2f5516b.chunk.css",
-    "main.js": "/aqar-map/static/js/main.8ea918f0.chunk.js",
-    "main.js.map": "/aqar-map/static/js/main.8ea918f0.chunk.js.map",
+    "main.js": "/aqar-map/static/js/main.1fdf665c.chunk.js",
+    "main.js.map": "/aqar-map/static/js/main.1fdf665c.chunk.js.map",
     "runtime-main.js": "/aqar-map/static/js/runtime-main.107a2e67.js",
     "runtime-main.js.map": "/aqar-map/static/js/runtime-main.107a2e67.js.map",
     "static/css/2.f2512455.chunk.css": "/aqar-map/static/css/2.f2512455.chunk.css",
@@ -30,6 +30,6 @@
     "static/css/2.f2512455.chunk.css",
     "static/js/2.3b485e26.chunk.js",
     "static/css/main.a2f5516b.chunk.css",
-    "static/js/main.8ea918f0.chunk.js"
+    "static/js/main.1fdf665c.chunk.js"
   ]
 }
