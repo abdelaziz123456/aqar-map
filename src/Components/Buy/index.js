@@ -2,6 +2,7 @@ import SearchBar from "../SearchBar";
 import {apartForSale} from '../../Data/index'
 import apartImg from '../../images/building.png'
 import './index.scss'
+import { Room } from "@material-ui/icons";
 function Buy(){
     return(
         <div className='buy'>
@@ -17,7 +18,7 @@ function Buy(){
                         <h4 >{apart.type}</h4>
                         <p className='price fw-bold'>{apart.price}</p>
                     </div>
-                    <small >{apart.address}</small>
+                    <small ><Room/>{apart.address}</small>
                     </div>
 
                 </div>
