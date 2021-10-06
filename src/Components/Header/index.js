@@ -30,13 +30,16 @@ function Header(){
               </div>
               <div className='d-flex '>
                 <div className="nav-item">
-                  <Link to='/' className="nav-link">Sell</Link>
+                  <Link to='/sell' className="nav-link">Sell</Link>
                 </div>
                 <div className="nav-item">
                   <Link to='#' className="nav-link">Buy</Link>
                 </div>
                 <div className="nav-item">
                   <Link to='#' className="nav-link">Rent</Link>
+                </div>
+                <div className="nav-item">
+                  <Link to='#' className="nav-link">Other Services</Link>
                 </div>
 
               </div>
