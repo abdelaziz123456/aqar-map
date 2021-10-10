@@ -3,10 +3,12 @@
 .footer{
     border-top: 1px solid rgba(128, 128, 128, 0.493);
     border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+    
 
    .header{
        color: black;
        font-weight: 700;
+       
        
    }
    .main-logo+p{
@@ -30,9 +32,11 @@
     }
     .icons{
         max-width: 100px;
-        color: $color-main;
+        
+        
         .icon{
             cursor: pointer;
+            color: $color-main ;
         }
         
     }

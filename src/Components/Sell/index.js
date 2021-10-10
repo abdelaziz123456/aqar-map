@@ -1,3 +1,5 @@
+
+import './index.scss'
 function Sell (props){
     return (
         <div className="sell">
@@ -5,3 +7,6 @@ function Sell (props){
         </div>
     )
 }
+
+
+export default Sell;

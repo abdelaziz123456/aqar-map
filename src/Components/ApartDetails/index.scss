@@ -1,0 +1,10 @@
+@import '../../scss/variables.scss';
+.apart-details{
+    li{
+        font-size: large;
+        color:$color-main;
+        span{
+            color:black
+        }
+    }
+}
