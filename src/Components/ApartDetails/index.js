@@ -17,6 +17,7 @@ function ApartDetails(props){
                  <li> <span>Area : {apartment.area} M <sup>2</sup></span></li>
                  <li> <span>Address : {apartment.address}</span></li>
                  <li>  <span>Rooms Number : {apartment.roomNum}</span></li>
+                 <li>  <span>Governorate : {apartment.governorate}</span></li>
                  
                  </ul>
                  <ul className="col-12 col-md-6">

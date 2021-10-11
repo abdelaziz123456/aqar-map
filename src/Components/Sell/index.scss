@@ -1,6 +1,16 @@
+@import '../../scss/variables.scss';
 .sell{
     .form-control{
         height: 40px;
+    }
+    .btn{
+        background-color: $color-main;
+        color: white;
+        min-width:200px;
+    }
+    label{
+        font-weight: 600;
+        
     }
 
 }
