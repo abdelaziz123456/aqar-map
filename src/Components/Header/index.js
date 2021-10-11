@@ -1,20 +1,25 @@
 import './index.scss';
 import React, { useState } from 'react';
+
 import {
   Collapse,
   Navbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
-  NavbarText
+  Dropdown, DropdownToggle, DropdownMenu, DropdownItem 
+ 
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
-function Header(){
+import { Equalizer, Forum, MonetizationOn, PersonPin, RecordVoiceOverRounded } from '@material-ui/icons';
+function Header(props){
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
+
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const dropDowntoggle = () => setDropdownOpen(prevState => !prevState);
   
     return (
       <div className='custom-header mb-3'>
@@ -36,10 +41,26 @@ function Header(){
                   <Link to='/buy' className="nav-link">Buy</Link>
                 </div>
                 <div className="nav-item">
-                  <Link to='#' className="nav-link">Rent</Link>
+                  <Link to='/rent' className="nav-link">Rent</Link>
                 </div>
                 <div className="nav-item">
-                  <Link to='#' className="nav-link">Other Services</Link>
+        
+                  
+                <Dropdown isOpen={dropdownOpen} toggle={dropDowntoggle} >
+                <DropdownToggle caret>
+                  Other Services
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem ><Equalizer color="action"/> Valuations</DropdownItem>
+                  <DropdownItem><MonetizationOn color="action"/> Price Guide</DropdownItem>
+                  <DropdownItem > <Forum color="action"/> Ask The Neighbors</DropdownItem>
+                  <DropdownItem ><PersonPin color="action"/> Top Agents</DropdownItem>
+                  
+                  <DropdownItem><RecordVoiceOverRounded color="action"/> Advice & Tips</DropdownItem>
+                  
+                </DropdownMenu>
+              </Dropdown>
+              
                 </div>
 
               </div>

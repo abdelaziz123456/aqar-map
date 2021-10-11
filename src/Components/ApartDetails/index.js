@@ -1,8 +1,8 @@
-import { apartForSale } from "../../Data";
+import { apartments } from "../../Data";
 import apartImg from '../../images/building.png';
 import './index.scss';
 function ApartDetails(props){
-    const apart=apartForSale.filter(apart=>apart.id==props.match.params.id);
+    const apart=apartments.filter(apart=>apart.id==props.match.params.id);
     const apartment=apart[0]
     return(
         apartment ?

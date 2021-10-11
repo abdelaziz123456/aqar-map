@@ -7,9 +7,11 @@ function SignUp(){
         <FormContainer header={'CREATE AN ACCOUNT'}>
             <p>type</p>
 
-            <select name="type" className="form-select" >
-                <option value="Provider">Provider</option>
-                <option value="seller">Seller</option>
+            <select name="type" className="form-select"  >
+                <option value="Provider">Private Owner</option>
+                <option value="seller">Freelancer</option>
+                <option value="Provider">Compound Developer</option>
+                <option value="seller">Exclusive</option>
             </select>
             <InputFiled label={'Email'} placeHolder={'Enter Email'} id={'email3'} type={'email'}/>
 
@@ -28,7 +30,7 @@ function SignUp(){
 
             <div className="d-flex mt-3">
             <input type="checkbox" name="" id="agree"  className='mt-2 me-2'/>
-            <label htmlFor="agree">I agree to RealEstate privacy policy and terms of use</label>
+            <label htmlFor="agree">I agree to Aqarmap privacy policy and terms of use</label>
 
             </div>
 

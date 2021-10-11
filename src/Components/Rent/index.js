@@ -4,10 +4,10 @@ import apartImg from '../../images/building.png'
 import './index.scss'
 import { ArrowForwardSharp, ArrowRightAltSharp, BathtubOutlined, CropSquareSharp, HotelOutlined, Room } from "@material-ui/icons";
 import { Link } from "react-router-dom";
-function Buy(){
-    const apartForSale=apartments.filter(apart=>apart.apartFor=='sale')
+function Rent(){
+    const apartForSale=apartments.filter(apart=>apart.apartFor=='rent')
     return(
-        <div className='buy'>
+        <div className='rent'>
             <SearchBar/>
             <div className='unit d-flex flex-wrap'>
                 {apartForSale.map((apart)=>
@@ -51,4 +51,4 @@ function Buy(){
     )
 }
 
-export default Buy
+export default Rent

@@ -1,0 +1,24 @@
+@import '../../scss/variables.scss';
+.rent{
+    .unit{
+        
+        .apart{
+            border:1px solid rgba(128, 128, 128, 0.15);
+            
+            .details{
+                .btn{
+                    background-color: $color-main ;
+                    color: azure;
+                    
+                    
+                }
+                
+                
+            }
+            .price{
+                color:$color-main
+            }
+            
+        }
+    }
+}

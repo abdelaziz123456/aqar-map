@@ -14,6 +14,7 @@ import Privacy from './Components/Privacy';
 import Buy from './Components/Buy';
 import Sell from './Components/Sell';
 import ApartDetails from './Components/ApartDetails';
+import Rent from './Components/Rent';
 function App() {
   return (
 
@@ -61,6 +62,11 @@ function App() {
 
     <Route exact path='/sell'>
       <Sell/>
+    </Route>
+
+
+    <Route exact path='/rent'>
+      <Rent/>
     </Route>
 
     <Route  path='/apart-details/:id' render={(props)=>{
