@@ -1,9 +1,45 @@
 
+import { useRef } from 'react';
+import { useState } from 'react';
 import InputFiled from '../InputFiled';
 import './index.scss'
 function Sell (props){
+
+    const [newApart,setNewApart]=useState({})
+
+    const typeRef=useRef();
+    const governRef=useRef();
+    const forRef=useRef();
+    const PayRef=useRef();
+    const roomRef=useRef();
+    const bathRef=useRef();
+    const yearRef=useRef();
+    const viewRef=useRef();
+    const areaRef=useRef();
+    const priceRef=useRef();
+    const addressRef=useRef();
+    const descRef=useRef();
+
+
+
   const  onSubmitHandler=(e)=>{
-        e.preventDefault()
+        e.preventDefault();
+        setNewApart({
+            type:typeRef.current.value,
+            governorate:governRef.current.value,
+            area:areaRef.current.value,
+            roomNum:roomRef.current.value,
+            bathNum:bathRef.current.value,
+            apartFor:forRef.current.value,
+            description:descRef.current.value,
+            address:addressRef.current.value,
+            price:priceRef.current.value,
+            paymentMethod:PayRef.current.value,
+            yearBuilt:yearRef.current.value,
+            view:viewRef.current.value
+        })
+        console.log(newApart)
+       
     }
     return (
         <form className="sell my-5" onSubmit={onSubmitHandler}>
@@ -15,12 +51,12 @@ function Sell (props){
                         Apartment Type
                     </label>
                     
-                <select class="form-select my-2" aria-label="Default select example" name='type' required>
+                <select class="form-select my-2" aria-label="Default select example" name='type' ref={typeRef} required>
                 
-                <option value="1">Flat</option>
-                <option value="2">Villa</option>
-                <option value="3">Chalet</option>
-                <option value="4">Town House</option>
+                <option value="flat">Flat</option>
+                <option value="villa">Villa</option>
+                <option value="chalet">Chalet</option>
+                <option value="town house">Town House</option>
                 </select>
                 </div>
                 
@@ -28,7 +64,7 @@ function Sell (props){
                 <label  className='form-label  my-2'>
                 Governorate
                     </label>
-                <select class="form-select my-2 form-control" aria-label="Default select example" name='governorate' required>
+                <select class="form-select my-2 form-control" aria-label="Default select example" name='governorate' ref={governRef} required>
                 
                 <option value="Cairo">Cairo</option>
                 <option value="Alexandria">Alexandria</option>
@@ -71,7 +107,7 @@ function Sell (props){
                         Apartment For
                     </label>
                     
-                <select class="form-select my-2" aria-label="Default select example" name='type' required>
+                <select class="form-select my-2" aria-label="Default select example" name='type' ref={forRef} required>
                 
                 <option value="sell">Sell</option>
                 <option value="rent">Rent</option>
@@ -83,7 +119,7 @@ function Sell (props){
                         Payment Method
                     </label>
                     
-                <select class="form-select my-2" aria-label="Default select example" name='type' required>
+                <select class="form-select my-2" aria-label="Default select example" name='type' ref={PayRef} required>
                 
                 <option value="sell">Cash</option>
                 <option value="rent">Installments</option>
@@ -99,30 +135,30 @@ function Sell (props){
 
             <div className="row">
             <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'Rooms Num'} type='number' id='roomNum'></InputFiled>
+                <InputFiled label={'Rooms Num'} type='number' id='roomNum' ref={roomRef}></InputFiled>
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
-                <InputFiled label={'Baths Num'} type='number' id='bathNum'></InputFiled>
+                <InputFiled label={'Baths Num'} type='number' id='bathNum' ref={bathRef}></InputFiled>
                 
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'Built Year'} type='number' id='year'></InputFiled>
+                <InputFiled label={'Built Year'} type='number' id='year' ref={yearRef}></InputFiled>
                 </div>
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
 
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'View '} type='text' id='View'></InputFiled>
+                <InputFiled label={'View '} type='text' id='View' ref={viewRef}></InputFiled>
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'Area In M2 '} type='number' id='area'></InputFiled>
+                <InputFiled label={'Area In M2 '} type='number' id='area' ref={areaRef}></InputFiled>
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'Price '} type='number' id='price'></InputFiled>
+                <InputFiled label={'Price '} type='number' id='price' ref={priceRef}></InputFiled>
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
@@ -132,12 +168,12 @@ function Sell (props){
 
                 <div className="col-12 col-md-6 ">
                 <label for="address" class="form-label">Address In Details </label>
-                <textarea class="form-control" id="address" style={{"height": "100px"}}  required></textarea>
+                <textarea class="form-control" id="address" style={{"height": "100px"}}  required ref={addressRef}></textarea>
                 </div>
 
                 <div className="col-12 col-md-6 ">
                 <label for="description" class="form-label">Description </label>
-                <textarea class="form-control" id="description" required style={{"height": "100px"}} ></textarea>
+                <textarea class="form-control" id="description" required style={{"height": "100px"}} ref={descRef} ></textarea>
                 </div>
                 </div>
 
@@ -156,3 +192,7 @@ function Sell (props){
 
 
 export default Sell;
+
+
+
+
