@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/aqar-map/static/css/main.548b80d5.chunk.css",
-    "main.js": "/aqar-map/static/js/main.3473e390.chunk.js",
-    "main.js.map": "/aqar-map/static/js/main.3473e390.chunk.js.map",
+    "main.js": "/aqar-map/static/js/main.bc4c2cb7.chunk.js",
+    "main.js.map": "/aqar-map/static/js/main.bc4c2cb7.chunk.js.map",
     "runtime-main.js": "/aqar-map/static/js/runtime-main.107a2e67.js",
     "runtime-main.js.map": "/aqar-map/static/js/runtime-main.107a2e67.js.map",
     "static/css/2.f2512455.chunk.css": "/aqar-map/static/css/2.f2512455.chunk.css",
-    "static/js/2.1bd64fab.chunk.js": "/aqar-map/static/js/2.1bd64fab.chunk.js",
-    "static/js/2.1bd64fab.chunk.js.map": "/aqar-map/static/js/2.1bd64fab.chunk.js.map",
+    "static/js/2.f2d92aec.chunk.js": "/aqar-map/static/js/2.f2d92aec.chunk.js",
+    "static/js/2.f2d92aec.chunk.js.map": "/aqar-map/static/js/2.f2d92aec.chunk.js.map",
     "index.html": "/aqar-map/index.html",
     "static/css/2.f2512455.chunk.css.map": "/aqar-map/static/css/2.f2512455.chunk.css.map",
     "static/css/main.548b80d5.chunk.css.map": "/aqar-map/static/css/main.548b80d5.chunk.css.map",
-    "static/js/2.1bd64fab.chunk.js.LICENSE.txt": "/aqar-map/static/js/2.1bd64fab.chunk.js.LICENSE.txt",
+    "static/js/2.f2d92aec.chunk.js.LICENSE.txt": "/aqar-map/static/js/2.f2d92aec.chunk.js.LICENSE.txt",
     "static/media/3alameen.b80e7a59.jpg": "/aqar-map/static/media/3alameen.b80e7a59.jpg",
     "static/media/index.scss": "/aqar-map/static/media/Background.ab204810.png",
     "static/media/Giza.1e8e5763.jpg": "/aqar-map/static/media/Giza.1e8e5763.jpg",
@@ -28,8 +28,8 @@
   "entrypoints": [
     "static/js/runtime-main.107a2e67.js",
     "static/css/2.f2512455.chunk.css",
-    "static/js/2.1bd64fab.chunk.js",
+    "static/js/2.f2d92aec.chunk.js",
     "static/css/main.548b80d5.chunk.css",
-    "static/js/main.3473e390.chunk.js"
+    "static/js/main.bc4c2cb7.chunk.js"
   ]
 }
