@@ -3,12 +3,22 @@ import InputFiled from "../InputFiled";
 import './index.scss'
 import {Link} from 'react-router-dom'
 
-function SignIn(){
+function SignIn(props){
+    const signHandler=(e)=>{
+        e.preventDefault();
+        props.setIsLogged(true)
+        console.log('logged')
+    }
     return(
-        <div className='sign-in'>
+        
+        
+            <form className='sign-in' onSubmit={signHandler}>
+
+{ !props.isLogged ? <>
             <FormContainer header={'SIGN IN'}>
-            <InputFiled id={'email1'} type={'email'} label={'Email'} placeHolder={'enter your email'}/>
-            <InputFiled id={'pass1'} type={'password'} label={'Password'} placeHolder={'enter your password'}/>
+
+               <InputFiled id={'email1'} type={'email'} label={'Email'} placeHolder={'enter your email'} required/>
+            <InputFiled id={'pass1'} type={'password'} label={'Password'} placeHolder={'enter your password'} required/>
             <div className="d-flex ">
                 <div  className=' me-5'>
                 <input type="checkbox" name="" id="checkBox1" className=' me-1 mt-1 ' />
@@ -21,7 +31,7 @@ function SignIn(){
                 
             </div>
 
-            <button className="btn my-3  form-button  ">
+            <button className="btn my-3  form-button  " type='submit'>
                 Sign in
             </button>
             
@@ -34,10 +44,17 @@ function SignIn(){
             
 
             
-                
+               
+            
             </FormContainer>
-
-        </div>
+            </> :<FormContainer >
+                <h4 className='form-button p-2'>Logged in Successfully</h4>
+                <Link to="/account-details" className='text-decoration-none text-secondary my-2'>
+                <h6>Complete your Information &gt;	&gt;	</h6>
+                </Link>
+            </FormContainer>  }
+        </form> 
+        
     )
 }
 export default SignIn;

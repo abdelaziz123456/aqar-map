@@ -1,5 +1,6 @@
 import './index.scss';
 import React, { useState } from 'react';
+import profile from '../../images/profile.jpg'
 
 import {
   Collapse,
@@ -10,22 +11,32 @@ import {
   Dropdown, DropdownToggle, DropdownMenu, DropdownItem 
  
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
-import { Equalizer, Forum, MonetizationOn, PersonPin, RecordVoiceOverRounded } from '@material-ui/icons';
+import { Link ,useHistory} from 'react-router-dom';
+import { Equalizer, Forum, MonetizationOn, PersonPin, RecordVoiceOverRounded , ExitToApp} from '@material-ui/icons';
+
+
 function Header(props){
+
+  let history=useHistory();
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggle = () => setIsOpen(!isOpen);
+    const navbarToggle = () => setIsOpen(!isOpen);
 
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const dropDowntoggle = () => setDropdownOpen(prevState => !prevState);
+
+
+    const logOut=()=>{
+      props.setIsLogged(false);
+      history.push("/aqar-map");
+    }
   
     return (
       <div className='custom-header mb-3'>
         <Navbar color="white" light expand="md">
           <NavbarBrand href="/aqar-map" className='nav-icon'><span>Aqar</span>-Map</NavbarBrand>
-          <NavbarToggler onClick={toggle} />
+          <NavbarToggler onClick={navbarToggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className='d-flex justify-content-between w-100' navbar>
 
@@ -66,7 +77,38 @@ function Header(props){
               </div>
               <div>
               <div className="nav-item">
-                  <Link to='/sign-in' className="nav-link btn  ">Sign Up / In</Link>
+
+               
+
+
+              {!props.isLogged ?
+              
+
+              //  unlogged case 
+
+              
+              <Link to='/sign-in' className="nav-link btn  ">Sign Up / In</Link> 
+
+              
+              :
+
+              //  logged case
+              <div >
+                
+                <Link to="/account-details"  >
+                <img className='rounded-circle' width="50" height='40' src={profile}></img> 
+              </Link> 
+
+              <button className='ms-1 btn btn-sm' onClick={logOut}>
+                <ExitToApp/>
+              </button>
+
+              </div>
+               }  
+
+               
+
+             
                 </div>
 
               </div>

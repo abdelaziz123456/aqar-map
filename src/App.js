@@ -15,19 +15,23 @@ import Buy from './Components/Buy';
 import Sell from './Components/Sell';
 import ApartDetails from './Components/ApartDetails';
 import Rent from './Components/Rent';
+import { useState } from 'react';
+import AccountDetails from './Components/AccountDetails';
 function App() {
+
+  const [isLogged,setIsLogged]=useState(false)
   return (
 
     <BrowserRouter>
     <div  className="app  my-3 ">
-    <Navbar/>
+    <Navbar isLogged={isLogged} setIsLogged={setIsLogged}/>
     
     <Route exact path='/aqar-map'>
       <MainContent/>
     </Route >
 
     <Route exact path='/sign-in'>
-      <SignIn/>
+      <SignIn setIsLogged={setIsLogged} isLogged={isLogged}/>
     </Route>
 
     <Route exact path='/forget-password'>
@@ -61,12 +65,16 @@ function App() {
     </Route>
 
     <Route exact path='/sell'>
-      <Sell/>
+      <Sell isLogged={isLogged}/>
     </Route>
 
 
     <Route exact path='/rent'>
       <Rent/>
+    </Route>
+
+    <Route exact path='/account-details'>
+      <AccountDetails/>
     </Route>
 
     <Route  path='/apart-details/:id' render={(props)=>{

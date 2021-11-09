@@ -2,6 +2,8 @@
 import { useRef } from 'react';
 import { useState } from 'react';
 import InputFiled from '../InputFiled';
+import FormContainer from '../FormContainer';
+import { Link } from 'react-router-dom';
 import './index.scss'
 function Sell (props){
 
@@ -42,7 +44,12 @@ function Sell (props){
        
     }
     return (
-        <form className="sell my-5" onSubmit={onSubmitHandler}>
+            <div className='sell my-5 d-flex justify-content-center align-items-center'>
+           {
+              props.isLogged ?
+
+              <form  onSubmit={onSubmitHandler}>
+
             <h3>Main Details</h3>
 
             <div className="row d-flex justify-conent-center my-4">
@@ -184,9 +191,20 @@ function Sell (props){
                 Confirm Ad
             </button>
             </div>
+             </form> 
+
+            : 
+            <FormContainer >
+                <h4 className='form-button p-2'>you should Sign in</h4>
+                <Link to="/sign-in" className='text-decoration-none text-secondary my-2'>
+                <h6>Sign in from here &gt;	&gt;	</h6>
+                </Link>
+            </FormContainer>
+        }
             
-            
-        </form>
+       
+            </div>
+    
     )
 }
 

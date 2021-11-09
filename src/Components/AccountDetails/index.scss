@@ -1,0 +1,18 @@
+@import '../../scss/variables.scss';
+.account-details{
+
+    .form-group{
+
+        label{
+            margin: 10px 0;
+            }
+        .form-control{
+            height: 30px;
+        }
+    }
+    .btn{
+        background-color: $color-main;
+        color: white;
+        font-weight: 600;
+    }
+}
