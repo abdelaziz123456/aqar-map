@@ -5,15 +5,16 @@ import InputFiled from '../InputFiled';
 import FormContainer from '../FormContainer';
 import { Link } from 'react-router-dom';
 import { add_property } from '../../Actions';
-import {useSelector,useDispatch} from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux';
+import { useHistory } from 'react-router';
 import './index.scss'
 
 function Sell (props){
-
+let history=useHistory()
     let apartments=useSelector(state=>state);
     
 
-    const [newApart,setNewApart]=useState({})
+    
 
     const typeRef=useRef();
     const governRef=useRef();
@@ -31,31 +32,38 @@ function Sell (props){
     const dispatch = useDispatch()
 
 
-
   const  onSubmitHandler=(e)=>{
         e.preventDefault();
-        setNewApart({
-            id:apartments.length+1,
-            type:typeRef.current.value,
-            governorate:governRef.current.value,
-            area:Number(areaRef.current.value),
-            roomNum:Number(roomRef.current.value),
-            bathNum:Number(bathRef.current.value),
-            apartFor:forRef.current.value,
-            description:descRef.current.value,
-            address:addressRef.current.value,
-            price:Number(priceRef.current.value),
-            paymentMethod:PayRef.current.value,
-            yearBuilt:Number(yearRef.current.value),
-            view:viewRef.current.value
-        } ,dispatch(add_property(
-            newApart
+        dispatch(add_property(
+            {
+                id:apartments.length+1,
+                type:typeRef.current.value,
+                governorate:governRef.current.value,
+                area:Number(areaRef.current.value),
+                roomNum:Number(roomRef.current.value),
+                bathNum:Number(bathRef.current.value),
+                apartFor:forRef.current.value,
+                description:descRef.current.value,
+                address:addressRef.current.value,
+                price:Number(priceRef.current.value),
+                paymentMethod:PayRef.current.value,
+                yearBuilt:Number(yearRef.current.value),
+                view:viewRef.current.value
+            } 
 
-        )));
-        
-        console.log(apartments)
-        
+        ));
+        if(forRef.current.value==='sale'){
+            history.push('/buy')
+        }else{
+            history.push('/rent')
+        }
+     
        
+       
+        
+        
+        
+        
     }
     return (
             <div className='sell my-5 d-flex justify-content-center align-items-center'>
