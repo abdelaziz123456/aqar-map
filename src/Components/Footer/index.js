@@ -18,26 +18,26 @@ function Footer(){
                 </div>
             </div>
             <div>
-                <a href="/aqar-map" style={{'text-decoration':'none'}} >
+                <Link exact to="/aqar-map" style={{'text-decoration':'none'}} >
                 <p className="header">
                     AqarMap
                 </p>
-                </a>
+                </Link>
                 
                 <p className="line">
                     
                 </p>
                 <p>
-                <a className='text-decoration-none text-secondary' href="/about">About</a>
+                <Link className='text-decoration-none text-secondary'exact to="/about">About</Link>
 
                 </p>
                 <p>
-                <a className='text-decoration-none text-secondary' href="/contact-us">Contact Us</a>
+                <Link className='text-decoration-none text-secondary' exact to="/contact-us">Contact Us</Link>
 
                 </p>
                 
                 <p>
-                <a className='text-decoration-none text-secondary' href="/privacy">Privacy</a>
+                <Link className='text-decoration-none text-secondary' exact to="/privacy">Privacy</Link>
 
                 </p>
                 

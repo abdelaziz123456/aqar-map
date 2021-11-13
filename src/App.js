@@ -26,6 +26,11 @@ function App() {
     <div  className="app  my-3 ">
     <Navbar isLogged={isLogged} setIsLogged={setIsLogged}/>
     
+
+    <Route exact path='/'>
+      <MainContent/>
+    </Route >
+
     <Route exact path='/aqar-map'>
       <MainContent/>
     </Route >

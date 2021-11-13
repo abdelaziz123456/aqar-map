@@ -4,8 +4,14 @@ import { useState } from 'react';
 import InputFiled from '../InputFiled';
 import FormContainer from '../FormContainer';
 import { Link } from 'react-router-dom';
+import { add_property } from '../../Actions';
+import {useSelector,useDispatch} from 'react-redux'
 import './index.scss'
+
 function Sell (props){
+
+    let apartments=useSelector(state=>state);
+    
 
     const [newApart,setNewApart]=useState({})
 
@@ -22,25 +28,33 @@ function Sell (props){
     const addressRef=useRef();
     const descRef=useRef();
 
+    const dispatch = useDispatch()
+
 
 
   const  onSubmitHandler=(e)=>{
         e.preventDefault();
         setNewApart({
+            id:apartments.length+1,
             type:typeRef.current.value,
             governorate:governRef.current.value,
-            area:areaRef.current.value,
-            roomNum:roomRef.current.value,
-            bathNum:bathRef.current.value,
+            area:Number(areaRef.current.value),
+            roomNum:Number(roomRef.current.value),
+            bathNum:Number(bathRef.current.value),
             apartFor:forRef.current.value,
             description:descRef.current.value,
             address:addressRef.current.value,
-            price:priceRef.current.value,
+            price:Number(priceRef.current.value),
             paymentMethod:PayRef.current.value,
-            yearBuilt:yearRef.current.value,
+            yearBuilt:Number(yearRef.current.value),
             view:viewRef.current.value
-        })
-        console.log(newApart)
+        } ,dispatch(add_property(
+            newApart
+
+        )));
+        
+        console.log(apartments)
+        
        
     }
     return (
@@ -116,7 +130,7 @@ function Sell (props){
                     
                 <select class="form-select my-2" aria-label="Default select example" name='type' ref={forRef} required>
                 
-                <option value="sell">Sell</option>
+                <option value="sale">Sell</option>
                 <option value="rent">Rent</option>
                 
                 </select>
@@ -128,9 +142,9 @@ function Sell (props){
                     
                 <select class="form-select my-2" aria-label="Default select example" name='type' ref={PayRef} required>
                 
-                <option value="sell">Cash</option>
-                <option value="rent">Installments</option>
-                <option value="rent">Both Available</option>
+                <option value="Cash">Cash</option>
+                
+                <option value="Cash or Installments">Cash or Installments</option>
                 
                 </select>
                 </div>

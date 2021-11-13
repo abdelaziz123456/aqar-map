@@ -35,7 +35,7 @@ function Header(props){
     return (
       <div className='custom-header mb-3'>
         <Navbar color="white" light expand="md">
-          <NavbarBrand href="/aqar-map" className='nav-icon'><span>Aqar</span>-Map</NavbarBrand>
+          <NavbarBrand className='nav-icon'><Link exact to='/aqar-map'><span>Aqar</span>-Map</Link>  </NavbarBrand>
           <NavbarToggler onClick={navbarToggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className='d-flex justify-content-between w-100' navbar>

@@ -7,7 +7,7 @@ function SignIn(props){
     const signHandler=(e)=>{
         e.preventDefault();
         props.setIsLogged(true)
-        console.log('logged')
+        
     }
     return(
         

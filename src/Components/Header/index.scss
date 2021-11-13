@@ -11,6 +11,11 @@
         font-weight: 900;
         padding-bottom: 0 !important;
         border-bottom: 2px solid $color-main;
+        a{
+            text-decoration: none;
+            color: #212529;
+        }
+        
         span{
             color:$color-main
         }
