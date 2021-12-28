@@ -1,5 +1,5 @@
 import FormContainer from "../FormContainer" 
-import InputFiled from "../InputFiled";
+import InputField from "../InputField";
 import contact from '../../images/contact.png'
 function ContactUs(){
 
@@ -25,9 +25,9 @@ function ContactUs(){
                 <img src={contact}  className="img-fluid" />
             </div>
             <FormContainer header={'Send email'}>
-               <InputFiled label={'Name'} id={'name'} placeHolder={'enter your name'} type={'text'}/>
+               <InputField label={'Name'} id={'name'} placeHolder={'enter your name'} type={'text'}/>
 
-               <InputFiled label={'Email'} id={'email'} placeHolder={'enter your email'} type={'email'}/>
+               <InputField label={'Email'} id={'email'} placeHolder={'enter your email'} type={'email'}/>
                <label htmlFor='message' className='my-2'>message</label>
                <textarea className='form-control' id='message' placeholder='enter your message'></textarea>
                <div className="d-flex my-3">

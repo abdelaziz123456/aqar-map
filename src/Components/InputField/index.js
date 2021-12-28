@@ -1,7 +1,7 @@
 import './index.scss';
 import {forwardRef} from 'react';
 
-function InputFiled(props,ref){
+function InputField(props,ref){
     return(
     <div className={ `cust-input my-1 ${props.className}`}>
     <label for={props.id} class="form-label my-2">{props.label}</label>
@@ -11,7 +11,7 @@ function InputFiled(props,ref){
     )
 }
 
-export default forwardRef(InputFiled);
+export default forwardRef(InputField);
 
 
 

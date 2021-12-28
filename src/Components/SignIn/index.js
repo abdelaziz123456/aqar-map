@@ -1,5 +1,5 @@
 import FormContainer from "../FormContainer";
-import InputFiled from "../InputFiled";
+import InputField from "../InputField";
 import './index.scss'
 import {Link} from 'react-router-dom'
 
@@ -17,8 +17,8 @@ function SignIn(props){
 { !props.isLogged ? <>
             <FormContainer header={'SIGN IN'}>
 
-               <InputFiled id={'email1'} type={'email'} label={'Email'} placeHolder={'enter your email'} required/>
-            <InputFiled id={'pass1'} type={'password'} label={'Password'} placeHolder={'enter your password'} required/>
+               <InputField id={'email1'} type={'email'} label={'Email'} placeHolder={'enter your email'} required/>
+            <InputField id={'pass1'} type={'password'} label={'Password'} placeHolder={'enter your password'} required/>
             <div className="d-flex ">
                 <div  className=' me-5'>
                 <input type="checkbox" name="" id="checkBox1" className=' me-1 mt-1 ' />

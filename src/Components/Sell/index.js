@@ -1,7 +1,7 @@
 
 import { useRef } from 'react';
-import { useState } from 'react';
-import InputFiled from '../InputFiled';
+
+import InputField from '../InputField';
 import FormContainer from '../FormContainer';
 import { Link } from 'react-router-dom';
 import { add_property } from '../../Actions';
@@ -164,30 +164,30 @@ let history=useHistory()
 
             <div className="row">
             <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'Rooms Num'} type='number' id='roomNum' ref={roomRef}></InputFiled>
+                <InputField label={'Rooms Num'} type='number' id='roomNum' ref={roomRef}></InputField>
                 </div>
                 <div className="col-12 col-md-6 col-lg-3">
-                <InputFiled label={'Baths Num'} type='number' id='bathNum' ref={bathRef}></InputFiled>
+                <InputField label={'Baths Num'} type='number' id='bathNum' ref={bathRef}></InputField>
                 
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'Built Year'} type='number' id='year' ref={yearRef}></InputFiled>
+                <InputField label={'Built Year'} type='number' id='year' ref={yearRef}></InputField>
                 </div>
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
 
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'View '} type='text' id='View' ref={viewRef}></InputFiled>
+                <InputField label={'View '} type='text' id='View' ref={viewRef}></InputField>
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'Area In M2 '} type='number' id='area' ref={areaRef}></InputFiled>
+                <InputField label={'Area In M2 '} type='number' id='area' ref={areaRef}></InputField>
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
-                <InputFiled label={'Price '} type='number' id='price' ref={priceRef}></InputFiled>
+                <InputField label={'Price '} type='number' id='price' ref={priceRef}></InputField>
                 </div>
 
                 <div className="col-12 col-md-6 col-lg-3 d-flex flex-column">
