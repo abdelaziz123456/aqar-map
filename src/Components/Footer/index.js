@@ -1,16 +1,16 @@
 import { Facebook, Instagram, LinkedIn, YouTube } from '@material-ui/icons'
 import  './index.scss';
 import {Link} from 'react-router-dom'
-
+import { Trans, useTranslation } from 'react-i18next';
 function Footer(){
     return(
         <div className='footer d-flex
         justify-content-between flex-wrap my-2 py-3'>
             <div>
                 <Link to="/aqar-map" className="main-logo">
-                <span>Aqar</span>-Map
+                <span>{<Trans>aqar</Trans>}</span>-{<Trans>map</Trans> }
                 </Link>
-                <p>The real estate marketplace</p>
+                <p><Trans>The real estate marketplace</Trans></p>
                 <div className='d-flex justify-content-between icons mb-5'>
                      <a href='https://www.instagram.com/aqarmap/' className='icon'><Instagram /></a> 
                     <a href='https://www.facebook.com/aqarmapcom' className='icon'><Facebook /> </a> 

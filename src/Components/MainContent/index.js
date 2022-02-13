@@ -9,24 +9,27 @@ import dahab from '../../images/dahab.jpg';
 import sharm from '../../images/sharm.jpg';
 
 import Slider from '../Slider/index'
-import Discover from '../Discover'
+import Discover from '../Discover';
+import { Trans, useTranslation } from 'react-i18next';
 
 function MainContent(){
+    let [t,i18n]=useTranslation();
     return(
         <div className='main-content'>
 
 
 
-            <div className="content-header">
-                <div className="left pe-3 py-5">
-                    <p >
-                        Aqar Map is
+            <div className={`content-header ${i18n.language==='ar' ? 'rtl' : 'ltr'}` }>
+                <div className="left pe-3 py-5 ">
+                    <p  className='fw-bold'>
+                    <Trans>Aqar Map is</Trans>     
                     </p>
                     <div className="h1 ">
-                        The real estate marketplace
+                        <Trans>The real estate marketplace</Trans> 
                     </div>
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                    <p className='ps-2' >
+                    <Trans>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Trans>
+                    
                     </p>
                 </div>
                 <div className="right">
@@ -43,7 +46,7 @@ function MainContent(){
             <div className="cities-section my-5 w-100 ">
                 
                 <p className='line'></p>
-                <h4 className='mb-5'>Explore our neighbourhoods</h4>
+                <h4 className='mb-5 fw-bold'><Trans>Explore our neighbourhoods</Trans> </h4>
                 <div  className='w-100'>
 
 
@@ -53,18 +56,18 @@ function MainContent(){
 
                             <div className="floated">
                                 <h6 className='text-bolder'>
-                                    Cairo
+                                   <Trans>Cairo</Trans> 
                                 </h6>
-                                <p>Egypt</p>
+                                <p><Trans>Egypt</Trans> </p>
                             </div>
                         </div>
                         <div className="col-12  col-sm-4 position-relative my-2">
                         <img className='img-fluid' src={giza}  alt="giza" />
                         <div className="floated">
                                 <h6 className='text-bolder'>
-                                    Giza
+                                <Trans>Giza</Trans>  
                                 </h6>
-                                <p>Egypt</p>
+                                <p><Trans>Egypt</Trans> </p>
                             </div>
                         
                         </div>
@@ -72,9 +75,9 @@ function MainContent(){
                         <img className='img-fluid' src={alex} alt="alex" />
                         <div className="floated">
                                 <h6 className='text-bolder'>
-                                   Alex
+                                <Trans>Alex</Trans> 
                                 </h6>
-                                <p>Egypt</p>
+                                <p><Trans>Egypt</Trans></p>
                             </div>
                         </div>
                     </div>
@@ -86,9 +89,9 @@ function MainContent(){
                         <img className='img-fluid' src={aswan} alt="aswan" />
                         <div className="floated">
                                 <h6 className='text-bolder'>
-                                    Luxur
+                                <Trans>Luxur</Trans>  
                                 </h6>
-                                <p>Egypt</p>
+                                <p><Trans>Egypt</Trans></p>
                             </div>
                         
                             
@@ -99,9 +102,9 @@ function MainContent(){
                         <img className='img-fluid w-100 ' src={dahab} alt="dahab" />
                         <div className="floated">
                                 <h6 className='text-bolder'>
-                                    Dahab
+                                <Trans>Dahab</Trans>   
                                 </h6>
-                                <p>Egypt</p>
+                                <p><Trans>Egypt</Trans></p>
                             </div>
 
                         </div>
@@ -114,18 +117,18 @@ function MainContent(){
                         <img className='img-fluid w-100 ' src={sharm} alt="sharm" />
                         <div className="floated">
                                 <h6 className='text-bolder'>
-                                    Sharm
+                                <Trans>Sharm</Trans>  
                                 </h6>
-                                <p>Egypt</p>
+                                <p><Trans>Egypt</Trans></p>
                             </div>
                         </div>
                         <div className="col-12  col-sm-4 position-relative my-2">
                             <img className='img-fluid w-100 ' src={alameen} alt="alameen" />
                             <div className="floated">
                                 <h6 className='text-bolder'>
-                                    Alamen
+                                <Trans>Alamen</Trans>   
                                 </h6>
-                                <p>Egypt</p>
+                                <p><Trans>Egypt</Trans></p>
                             </div>
                             </div>
                         

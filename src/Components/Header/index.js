@@ -12,10 +12,13 @@ import {
  
 } from 'reactstrap';
 import { Link ,useHistory} from 'react-router-dom';
-import { Equalizer, Forum, MonetizationOn, PersonPin, RecordVoiceOverRounded , ExitToApp} from '@material-ui/icons';
+import { Equalizer, Forum, MonetizationOn,  ExitToApp} from '@material-ui/icons';
+import { Trans, useTranslation } from 'react-i18next';
 
 
 function Header(props){
+
+  let [t,i18n]=useTranslation();
 
   let history=useHistory();
     const [isOpen, setIsOpen] = useState(false);
@@ -35,39 +38,36 @@ function Header(props){
     return (
       <div className='custom-header mb-3'>
         <Navbar color="white" light expand="md">
-          <NavbarBrand className='nav-icon'><Link exact to='/aqar-map'><span>Aqar</span>-Map</Link>  </NavbarBrand>
+          <NavbarBrand className='nav-icon'><Link exact to='/aqar-map'><span>{t('aqar')}</span>-{t('map')}</Link>  </NavbarBrand>
           <NavbarToggler onClick={navbarToggle} />
           <Collapse isOpen={isOpen} navbar>
-            <Nav className='d-flex justify-content-between w-100' navbar>
+            <Nav className={`d-flex justify-content-between w-100`} navbar>
 
 
-            <div className='d-flex empty'>
+            <div className={`d-flex empty `} >
 
               </div>
               <div className='d-flex '>
                 <div className="nav-item">
-                  <Link to='/sell' className="nav-link">Sell</Link>
+                  <Link to='/sell' className="nav-link">{<Trans>sell</Trans>}</Link>
                 </div>
                 <div className="nav-item">
-                  <Link to='/buy' className="nav-link">Buy</Link>
+                  <Link to='/buy' className="nav-link"><Trans>Buy</Trans></Link>
                 </div>
                 <div className="nav-item">
-                  <Link to='/rent' className="nav-link">Rent</Link>
+                  <Link to='/rent' className="nav-link"><Trans>Rent</Trans></Link>
                 </div>
                 <div className="nav-item">
         
                   
                 <Dropdown isOpen={dropdownOpen} toggle={dropDowntoggle} >
                 <DropdownToggle caret>
-                  Other Services
+                  <Trans>Language</Trans>  
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem ><Equalizer color="action"/> Valuations</DropdownItem>
-                  <DropdownItem><MonetizationOn color="action"/> Price Guide</DropdownItem>
-                  <DropdownItem > <Forum color="action"/> Ask The Neighbors</DropdownItem>
-                  <DropdownItem ><PersonPin color="action"/> Top Agents</DropdownItem>
-                  
-                  <DropdownItem><RecordVoiceOverRounded color="action"/> Advice & Tips</DropdownItem>
+                  <DropdownItem onClick={()=>{i18n.changeLanguage('ar')}}><Equalizer color="action"/> <Trans>AR</Trans> </DropdownItem>
+                  <DropdownItem onClick={()=>{i18n.changeLanguage('en')}}><MonetizationOn color="action"/> <Trans>EN</Trans> </DropdownItem>
+                 
                   
                 </DropdownMenu>
               </Dropdown>
@@ -87,7 +87,7 @@ function Header(props){
               //  unlogged case 
 
               
-              <Link to='/sign-in' className="nav-link btn  ">Sign Up / In</Link> 
+              <Link to='/sign-in' className="nav-link btn  "><Trans>Sign Up / In</Trans> </Link> 
 
               
               :

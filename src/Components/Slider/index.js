@@ -9,25 +9,26 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import { Trans } from 'react-i18next';
 
 const items = [
     {
         src: sliderBackground,
         altText: 'Slide 1',
-        caption: '«Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam »',
-        person:'John Black'
+        caption:<Trans>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Trans>,
+        person: <Trans>John Black</Trans>
     },
     {
       src: sliderBackground,
       altText: 'Slide 2',
-      caption: '«Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam »',
-      person:'John Black'
+      caption:<Trans>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Trans> ,
+      person:<Trans>John Black</Trans>
     },
     {
         src: sliderBackground,
         altText: 'Slide 3',
-        caption: '«Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam »',
-        person:'John Black'
+        caption:<Trans>Lorem ipsum dolor sit amet, consectetur adipiscing elit</Trans>,
+        person:<Trans>John Black</Trans>
     }
   ];
 

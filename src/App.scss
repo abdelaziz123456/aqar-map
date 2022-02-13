@@ -1,7 +1,21 @@
 .app{
     margin:0 80px;
+    font-family: 'Cairo', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
     .form-control{
         box-shadow: none;
+    }
+    .rtl{
+        direction: rtl;
+        p{
+            font-weight: 600;
+        }
+    }
+    .ltr{
+        direction: ltr;
     }
 }
 
