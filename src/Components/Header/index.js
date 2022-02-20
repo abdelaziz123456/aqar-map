@@ -49,7 +49,7 @@ function Header(props){
               </div>
               <div className='d-flex '>
                 <div className="nav-item">
-                  <Link to='/sell' className="nav-link">{<Trans>sell</Trans>}</Link>
+                  <Link to='/sell' className="nav-link"><Trans>sell</Trans></Link>
                 </div>
                 <div className="nav-item">
                   <Link to='/buy' className="nav-link"><Trans>Buy</Trans></Link>
@@ -65,8 +65,8 @@ function Header(props){
                   <Trans>Language</Trans>  
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem onClick={()=>{i18n.changeLanguage('ar')}}><Equalizer color="action"/> <Trans>AR</Trans> </DropdownItem>
-                  <DropdownItem onClick={()=>{i18n.changeLanguage('en')}}><MonetizationOn color="action"/> <Trans>EN</Trans> </DropdownItem>
+                  <DropdownItem onClick={()=>{i18n.changeLanguage('ar')}}> <Trans>AR</Trans> </DropdownItem>
+                  <DropdownItem onClick={()=>{i18n.changeLanguage('en')}}> <Trans>EN</Trans> </DropdownItem>
                  
                   
                 </DropdownMenu>

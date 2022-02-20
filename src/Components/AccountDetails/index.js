@@ -1,10 +1,11 @@
 import React from 'react';
 import './index.scss';
 import profile from '../../images/profile.jpg'
-
+import { Trans, useTranslation } from 'react-i18next';
 export default function AccountDetails() {
+    let [t,i18n]=useTranslation();
     return (
-        <div className='account-details'>
+        <div className={`account-details ${i18n.language==='ar' ? 'rtl' : 'ltr'}`}>
             <h2 className='fw-bold mb-5'>My Profile</h2>
             <div className="row">
 

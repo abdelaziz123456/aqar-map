@@ -2,7 +2,9 @@ import { Facebook, Instagram, LinkedIn, YouTube } from '@material-ui/icons'
 import  './index.scss';
 import {Link} from 'react-router-dom'
 import { Trans, useTranslation } from 'react-i18next';
+
 function Footer(){
+    let [t,i18n]=useTranslation();
     return(
         <div className='footer d-flex
         justify-content-between flex-wrap my-2 py-3'>
@@ -20,7 +22,7 @@ function Footer(){
             <div>
                 <Link exact to="/aqar-map" style={{'text-decoration':'none'}} >
                 <p className="header">
-                    AqarMap
+                   <Trans>AqarMap</Trans> 
                 </p>
                 </Link>
                 
@@ -28,16 +30,16 @@ function Footer(){
                     
                 </p>
                 <p>
-                <Link className='text-decoration-none text-secondary'exact to="/about">About</Link>
+                <Link className='text-decoration-none text-secondary'exact to="/about"><Trans>About</Trans> </Link>
 
                 </p>
                 <p>
-                <Link className='text-decoration-none text-secondary' exact to="/contact-us">Contact Us</Link>
+                <Link className='text-decoration-none text-secondary' exact to="/contact-us"><Trans> Contact Us</Trans></Link>
 
                 </p>
                 
                 <p>
-                <Link className='text-decoration-none text-secondary' exact to="/privacy">Privacy</Link>
+                <Link className='text-decoration-none text-secondary' exact to="/privacy"><Trans>Privacy</Trans> </Link>
 
                 </p>
                 
@@ -46,59 +48,61 @@ function Footer(){
             
                 <Link to="/sell" style={{'text-decoration':'none'}} >
                 <p className="header">
-                    Sell
+                    <Trans>sell</Trans>      
                 </p>
                 </Link>
                 <p className="line">
 
                 </p>
                 <p >
-                    Apartments
+                <Trans>Apartments</Trans>
                 </p>
                 <p >
-                    Houses
+                   <Trans>Houses</Trans> 
                 </p>
                 <p >
-                    Offices
+                   <Trans>Offices</Trans> 
                 </p>
                 <p >
-                    Lands
+                   <Trans>Lands</Trans> 
                 </p>
             </div>
             <div>
             <Link to="/buy" style={{'text-decoration':'none'}} >
                 <p className="header">
-                    Buy
+                  <Trans>Buy</Trans>  
                 </p>
                 </Link>
                 <p className="line">
                     
                 </p>
                 <p >
-                    Apartments
+                <Trans>Apartments</Trans>
                 </p>
                 <p >
-                    Houses
+                <Trans>Houses</Trans> 
                 </p>
                 <p >
-                    Offices
+                <Trans>Offices</Trans> 
+
                 </p>
                 <p >
-                    Lands
+                <Trans>Lands</Trans> 
+
                 </p>
             </div>
             <div>
             <p className="header">
-                    Customers
+                   <Trans>Customers</Trans> 
                 </p>
                 <p className="line">
                     
                 </p>
                 <p >
-                    For home sellers
+                   <Trans>For home sellers</Trans> 
                 </p>
                 <p >
-                    For real estate agents
+                    <Trans>For real estate agents</Trans> 
                 </p>
             </div>
         </div>

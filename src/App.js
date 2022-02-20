@@ -16,14 +16,16 @@ import Sell from './Components/Sell';
 import ApartDetails from './Components/ApartDetails';
 import Rent from './Components/Rent';
 import { useState } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import AccountDetails from './Components/AccountDetails';
 function App() {
 
-  const [isLogged,setIsLogged]=useState(false)
+  const [isLogged,setIsLogged]=useState(false);  
+  let [t,i18n]=useTranslation();
   return (
 
     <BrowserRouter>
-    <div  className="app  my-3 ">
+    <div  className={`app my-3 `}>
     <Navbar isLogged={isLogged} setIsLogged={setIsLogged}/>
     
 
