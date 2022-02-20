@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Modal,ModalBody } from 'reactstrap';
 import { useDispatch } from 'react-redux';
 import { delete_property } from '../../Actions';
+import { Trans, useTranslation } from 'react-i18next';
 
 export default function Apart(props) {
     let apart=props.apart;
@@ -20,7 +21,8 @@ export default function Apart(props) {
   
     // Toggle for Modal
     const toggle = () => setModal(!modal);
-    
+    let [t,i18n]=useTranslation();
+
     return (
         <div className='apart col-12 col-md-6 col-lg-3 my-2 '>
         <img src={apartImg} alt="" className="img-fluid w-100" />

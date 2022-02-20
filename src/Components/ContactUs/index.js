@@ -5,7 +5,7 @@ import { Trans, useTranslation } from 'react-i18next';
 function ContactUs(){
     let [t,i18n]=useTranslation();
     return(
-        <div className='contact-us d-flex justify-content-between my-5'>
+        <div className={`contact-us d-flex justify-content-between my-5 ${i18n.language==='ar' ? 'rtl fw-bolder' : 'ltr'}`}>
 
             <div className="left">
             <h3><Trans>Need Help?</Trans> </h3>

@@ -1,15 +1,17 @@
 import FormContainer from "../FormContainer";
 import InputField from "../InputField";
-
+import { Trans, useTranslation } from 'react-i18next';
 function EnterPass(){
+    let [t,i18n]=useTranslation();
+
     return(
-        <FormContainer header={'ENTER PASSWORD'}>
+        <FormContainer header={t('ENTER PASSWORD')}>
 
 
-        <InputField type={'password'} label={'Password'} id={'passcon1'} placeHolder={'enter password'}/>
-        <InputField type={'password'} label={'Confirm Password'} id={'passcon2'} placeHolder={'Confirm password'}/>
+        <InputField type={'password'} label={t('Password')} id={'passcon1'} />
+        <InputField type={'password'} label={t('Confirm Password')} id={'passcon2'} />
         <div className="btn form-button my-3">
-            change password
+            <Trans>change password</Trans> 
         </div>
 
         </FormContainer>
