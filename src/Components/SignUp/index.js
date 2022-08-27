@@ -28,24 +28,33 @@ function SignUp() {
             "Content-Type": "application/json",
           },
         }
-      ).then((res) => {
-        console.log(res)
-        if (res.ok) {
-          setClass("success");
-          setMessage("Signed Up successfully");
-          emailRef.current.value = "";
-          passRef.current.value = "";
-          passConfirmRef.current.value ='';
-
-        } 
-        return res.json()
-      }).then(data=>{
-        if(data?.error?.message){
-            console.log(data.error.message)
+      )
+        .then((res) => {
+          console.log(res);
+          if (res.ok) {
+            setClass("success");
+            setMessage("Signed Up successfully");
+            emailRef.current.value = "";
+            passRef.current.value = "";
+            passConfirmRef.current.value = "";
+          }
+          return res.json();
+        })
+        .then((data) => {
+          if (data?.error?.message) {
             setClass("error");
-            setMessage(data.error.message);
-        }
-      });
+            switch (data.error.message) {
+              case "EMAIL_EXISTS":
+                setMessage("this email already exists");
+                break;
+              case "WEAK_PASSWORD : Password should be at least 6 characters":
+                setMessage("Password should be at least 6 characters");
+                break;
+              default:
+                setMessage("something went wrong");
+            }
+          }
+        });
 
       //   axios
       //     .post(
@@ -125,7 +134,13 @@ function SignUp() {
         </div>
 
         <div className="d-flex mt-3">
-          <input type="checkbox" name="" id="agree" className="mt-2 me-2"  required/>
+          <input
+            type="checkbox"
+            name=""
+            id="agree"
+            className="mt-2 me-2"
+            required
+          />
           <label htmlFor="agree">
             I agree to Aqarmap privacy policy and terms of use
           </label>
@@ -136,11 +151,15 @@ function SignUp() {
         </button>
 
         <div className={resultClass + " mb-3"}>
-          {resultMessage}{resultClass=='success'  ? <Link to="/sign-in" className="text-secondary ms-2 ">
-            {" "}
-            Now you can log in 
-          </Link> : '' }
-          
+          {resultMessage}
+          {resultClass == "success" ? (
+            <Link to="/sign-in" className="text-secondary ms-2 ">
+              {" "}
+              Now you can log in
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
 
         <p>

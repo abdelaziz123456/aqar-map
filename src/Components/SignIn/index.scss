@@ -1,6 +1,11 @@
 @import '../../scss/variables.scss';
 .sign-in{
-
+    .error{
+        color:red !important
+    }
+    .success{
+        color:green
+    }
     .form-control{
         height: 30px;
         box-shadow: none;
@@ -19,5 +24,7 @@
     &:hover{
         color: white;
     }
+
+    
 }
 
