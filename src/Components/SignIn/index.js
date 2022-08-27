@@ -2,11 +2,14 @@ import FormContainer from "../FormContainer";
 import InputField from "../InputField";
 import './index.scss'
 import {Link} from 'react-router-dom'
-
+import AuthContext from "../../store/authContext";
+import {useContext} from 'react'
 function SignIn(props){
+
+    const authCtx=useContext(AuthContext)
     const signHandler=(e)=>{
         e.preventDefault();
-        props.setIsLogged(true)
+        authCtx.login('ddd')
         
     }
     return(
@@ -14,7 +17,7 @@ function SignIn(props){
         
             <form className='sign-in' onSubmit={signHandler}>
 
-{ !props.isLogged ? <>
+{ !authCtx.isLoggedIn ? <>
             <FormContainer header={'SIGN IN'}>
 
                <InputField id={'email1'} type={'email'} label={'Email'} placeHolder={'enter your email'} required/>

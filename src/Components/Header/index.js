@@ -1,5 +1,7 @@
 import './index.scss';
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
+import AuthContext from '../../store/authContext';
+
 import profile from '../../images/profile.jpg'
 
 import {
@@ -17,7 +19,7 @@ import { Trans, useTranslation } from 'react-i18next';
 
 
 function Header(props){
-
+  const authCtx=useContext(AuthContext);
   let [t,i18n]=useTranslation();
 
   let history=useHistory();
@@ -31,7 +33,7 @@ function Header(props){
 
 
     const logOut=()=>{
-      props.setIsLogged(false);
+      authCtx.logout()
       history.push("/aqar-map");
     }
   
@@ -81,7 +83,7 @@ function Header(props){
                
 
 
-              {!props.isLogged ?
+              {!authCtx.isLoggedIn ?
               
 
               //  unlogged case 
